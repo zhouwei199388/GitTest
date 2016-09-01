@@ -6,4 +6,5 @@
     <color name="text_title">#000000</color>
     <color name="text_content">#393939</color>
     <color name="ripple_color">#7921272b</color>
+    <color name="white">#ffffff</color>
 </resources>

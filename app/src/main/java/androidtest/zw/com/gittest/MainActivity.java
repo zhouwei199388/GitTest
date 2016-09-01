@@ -1,6 +1,7 @@
 package androidtest.zw.com.gittest;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidtest.zw.com.gittest.fragment.FragmentTestActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -32,6 +34,18 @@ public class MainActivity extends Activity {
         ButterKnife.bind(this);
         mRecycerView.setLayoutManager(new LinearLayoutManager(this));
         mRecycerView.setAdapter(new MainAdapter());
+    }
+
+    Intent intent;
+
+    private void toWeightActivity(int position) {
+        intent = new Intent();
+        switch (position) {
+            case 0:
+                intent.setClass(this, FragmentTestActivity.class);
+                break;
+        }
+        startActivity(intent);
     }
 
 
@@ -63,6 +77,7 @@ public class MainActivity extends Activity {
                 itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        toWeightActivity(getLayoutPosition());
                     }
                 });
                 textView = (TextView) itemView.findViewById(R.id.tv_title);
