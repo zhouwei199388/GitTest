@@ -2,15 +2,73 @@ package androidtest.zw.com.gittest;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * Created by Admin on 2016/8/31.
  */
 public class MainActivity extends Activity {
 
+    @BindView(R.id.main_recyclerView)
+    RecyclerView mRecycerView;
+
+
+    private String[] mWeightString;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_layout);
+        mWeightString = getResources().getStringArray(R.array.WeightString);
+        ButterKnife.bind(this);
+        mRecycerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecycerView.setAdapter(new MainAdapter());
     }
+
+
+    class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainHolder> {
+
+
+        @Override
+        public MainHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout
+                    .item_main_recyclerview, null);
+            return new MainHolder(view);
+        }
+
+        @Override
+        public void onBindViewHolder(MainHolder holder, int position) {
+            holder.textView.setText(mWeightString[position]);
+        }
+
+        @Override
+        public int getItemCount() {
+            return mWeightString == null ? 0 : mWeightString.length;
+        }
+
+        class MainHolder extends RecyclerView.ViewHolder {
+            TextView textView;
+
+            public MainHolder(View itemView) {
+                super(itemView);
+                itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+                textView = (TextView) itemView.findViewById(R.id.tv_title);
+            }
+        }
+    }
+
+
 }
