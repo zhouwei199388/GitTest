@@ -52,6 +52,7 @@ public class FragmentTestActivity extends FragmentActivity {
 
     @OnClick({R.id.tv_one, R.id.tv_two, R.id.tv_three})
     public void transactionFragment(View view) {
+        //每次提交后需重新获取
         mTransaction = getSupportFragmentManager().beginTransaction();
         switch (view.getId()) {
             case R.id.tv_one:

@@ -18,6 +18,7 @@
 
 
         <activity android:name=".fragment.FragmentTestActivity"/>
+        <activity android:name=".fragment.FragmentViewpagerActivity"/>
     </application>
 
 </manifest>

@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidtest.zw.com.gittest.fragment.FragmentTestActivity;
+import androidtest.zw.com.gittest.fragment.FragmentViewpagerActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -43,6 +44,9 @@ public class MainActivity extends Activity {
         switch (position) {
             case 0:
                 intent.setClass(this, FragmentTestActivity.class);
+                break;
+            case 1:
+                intent.setClass(this, FragmentViewpagerActivity.class);
                 break;
         }
         startActivity(intent);

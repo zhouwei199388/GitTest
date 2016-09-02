@@ -23,6 +23,7 @@
             android:padding="10dp"
             android:gravity="center"
             android:text="第一个"
+            android:background="@drawable/bg_item_selector"
             android:textColor="@color/text_content"
             android:textSize="@dimen/text_content"/>
 
@@ -35,6 +36,7 @@
             android:padding="10dp"
             android:text="第二个"
             android:textColor="@color/text_content"
+            android:background="@drawable/bg_item_selector"
             android:textSize="@dimen/text_content"/>
 
         <TextView
@@ -46,6 +48,7 @@
             android:padding="10dp"
             android:text="第三个"
             android:textColor="@color/text_content"
+            android:background="@drawable/bg_item_selector"
             android:textSize="@dimen/text_content"/>
     </LinearLayout>
 
