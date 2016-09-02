@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import androidtest.zw.com.gittest.fragment.FragmentTestActivity;
 import androidtest.zw.com.gittest.fragment.FragmentViewpagerActivity;
+import androidtest.zw.com.gittest.recyclerview.RecyclerViewItemDecoration;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -34,6 +35,8 @@ public class MainActivity extends Activity {
         mWeightString = getResources().getStringArray(R.array.WeightString);
         ButterKnife.bind(this);
         mRecycerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecycerView.addItemDecoration(new RecyclerViewItemDecoration(this,
+                RecyclerViewItemDecoration.VERTICAL_LIST));
         mRecycerView.setAdapter(new MainAdapter());
     }
 
