@@ -4,6 +4,17 @@
     <array name="WeightString">
         <item>Fragment</item>
         <item>TabLayout+viewpager</item>
+        <item>TabLayout+viewpager</item>
+        <item>TabLayout+viewpager</item>
+        <item>TabLayout+viewpager</item>
+        <item>TabLayout+viewpager</item>
+        <item>TabLayout+viewpager</item>
+        <item>TabLayout+viewpager</item>
+        <item>TabLayout+viewpager</item>
+        <item>TabLayout+viewpager</item>
+        <item>TabLayout+viewpager</item>
+        <item>TabLayout+viewpager</item>
+        <item>TabLayout+viewpager</item>
     </array>
     <array name="TabTitle">
         <item>Tab1</item>
